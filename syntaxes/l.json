@@ -1,0 +1,133 @@
+{
+    "attribute-alpine": {
+        "begin": "((x-[a-z\\-:]+)(?![\\w:-])|(:[a-z\\-:]+)(?![\\w:-]))",
+        "beginCaptures": {
+            "0": {
+                "name": "markup.bold"
+            }
+        },
+        "comment": "HTML5 attributes, data-*",
+        "end": "(?=\\s*+[^=\\s])",
+        "name": "markup.bold",
+        "patterns": [
+            {
+                "include": "#attribute-interior-alpine"
+            }
+        ]
+    },
+    "attribute-phx": {
+        "begin": "((phx-[a-z\\-:]+)(?![\\w:-])|(:[a-z\\-:]+)(?![\\w:-]))",
+        "beginCaptures": {
+            "0": {
+                "name": "keyword.control.'html'"
+            }
+        },
+        "comment": "HTML5 attributes, data-*",
+        "end": "(?=\\s*+[^=\\s])",
+        "name": "keyword.control.'html",
+        "patterns": [
+            {
+                "include": "#attribute-interior-phx"
+            }
+        ]
+    },
+    "attribute-interior-phx": {
+        "patterns": [
+            {
+                "begin": "=",
+                "beginCaptures": {
+                    "0": {
+                        "name": "keyword.control.'html'"
+                    }
+                },
+                "end": "(?<=[^\\s=])(?!\\s*=)|(?=/?>)",
+                "patterns": [
+                    {
+                        "match": "([^\\s\"'=<>`/]|/(?!>))+",
+                        "name": "string.unquoted.html"
+                    },
+                    {
+                        "begin": "\"",
+                        "beginCaptures": {
+                            "0": {
+                                "name": "punctuation.definition.string.begin.html"
+                            }
+                        },
+                        "end": "\"",
+                        "endCaptures": {
+                            "0": {
+                                "name": "punctuation.definition.string.end.html"
+                            }
+                        },
+                        "name": "string.unquoted.html",
+                        "patterns": [
+                            {
+                                "include": "#entities"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    "attribute-interior-alpine": {
+        "patterns": [
+            {
+                "begin": "=",
+                "beginCaptures": {
+                    "0": {
+                        "name": "markup.bold"
+                    }
+                },
+                "end": "(?<=[^\\s=])(?!\\s*=)|(?=/?>)",
+                "patterns": [
+                    {
+                        "match": "([^\\s\"'=<>`/]|/(?!>))+",
+                        "name": "string.unquoted.html"
+                    },
+                    {
+                        "begin": "\"",
+                        "beginCaptures": {
+                            "0": {
+                                "name": "punctuation.definition.string.begin.html"
+                            }
+                        },
+                        "end": "\"",
+                        "endCaptures": {
+                            "0": {
+                                "name": "punctuation.definition.string.end.html"
+                            }
+                        },
+                        "name": "markup.changed",
+                        "patterns": [
+                            {
+                                "include": "#entities"
+                            }
+                        ]
+                    },
+                    
+                    {
+                        "begin": "'",
+                        "beginCaptures": {
+                            "0": {
+                                "name": "punctuation.definition.string.begin.html"
+                            }
+                        },
+                        "end": "'",
+                        "endCaptures": {
+                            "0": {
+                                "name": "punctuation.definition.string.end.html"
+                            }
+                        },
+                        "name": "markup.changed",
+                        "patterns": [
+                            {
+                                "include": "#entities"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    }
+}

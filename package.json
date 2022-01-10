@@ -1,0 +1,25 @@
+{
+    "name": "heex-html",
+    "displayName": "heex html",
+    "description": "",
+    "version": "0.0.1",
+    "engines": {
+        "vscode": "^1.63.0"
+    },
+    "categories": [
+        "Programming Languages"
+    ],
+    "contributes": {
+        "languages": [{
+            "id": "html",
+            "aliases": ["html", "html"],
+            "extensions": [".html.heex"],
+            "configuration": "./language-configuration.json"
+        }],
+        "grammars": [{
+            "language": "html",
+            "scopeName": "text.html.heex",
+            "path": "./syntaxes/html.tmLanguage.json"
+        }]
+    }
+}
