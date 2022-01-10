@@ -2,7 +2,7 @@
 	"$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
 	"name": "html.heex",
 	"injections": {
-		"R:text.html - (comment.block, text.html.heex meta.embedded, meta.tag.*.*.html, meta.tag.*.*.*.html, meta.tag.*.*.*.*.html)": {
+		"R:text.html - (comment.block, text.html.heex meta.embedded, meta.tag.*.*.html.heex, meta.tag.*.*.*.html.heex, meta.tag.*.*.*.*.html.heex)": {
 			"comment": "Uses R: to ensure this matches after any other injections.",
 			"patterns": [
 				{

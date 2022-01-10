@@ -1,10 +1,22 @@
 {
     "name": "heex-html",
-    "displayName": "heex html",
-    "description": "",
+    "icon": "./src/logo.png",
+    "displayName": "Heex HTML",
+    "description": "Syntax highlighting for HEEX templates in Phoenix Framework 🚀",
     "version": "0.0.1",
     "engines": {
         "vscode": "^1.63.0"
+    },
+    "keywords": [
+        "heex html",
+        "heex",
+        "phoenix heex",
+        "html heex",
+        "elixir heex"
+    ],
+    "publisher": "ritvyk",
+    "repository": {
+        "url": "https://github.com/Ritvyk/vscode-heex-html"
     },
     "categories": [
         "Programming Languages"
@@ -12,11 +24,22 @@
     "contributes": {
         "languages": [{
             "id": "html",
-            "aliases": ["html", "html"],
+            "aliases": ["html", "heex"],
             "extensions": [".html.heex"],
             "configuration": "./language-configuration.json"
         }],
         "grammars": [{
+            "injectTo": [
+                "text.html.heex",
+                "text.heex",
+                "text.ex"
+            ],
+            "embeddedLanguages": {
+                "meta.embedded.block.html": "html",
+               
+                "meta.embedded.block.css": "css",
+                "source.css": "css"
+            },
             "language": "html",
             "scopeName": "text.html.heex",
             "path": "./syntaxes/html.tmLanguage.json"
