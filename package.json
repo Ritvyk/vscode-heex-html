@@ -3,13 +3,15 @@
     "icon": "src/logo.png",
     "displayName": "Heex HTML",
     "description": "Syntax highlighting for HEEX templates in Phoenix Framework 🚀. Highlight Alpine JS , HEEX and Elixir template code",
-    "version": "0.0.3",
+    "version": "0.0.4",
     "engines": {
         "vscode": "^1.63.0"
     },
     "keywords": [
         "heex html",
         "heex",
+        "phoenix html",
+        "phoenix",
         "phoenix heex",
         "html heex",
         "elixir heex"
