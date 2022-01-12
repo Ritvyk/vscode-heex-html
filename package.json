@@ -5,7 +5,7 @@
     "description": "Syntax highlighting for HEEX templates in Phoenix Framework 🚀. Highlight Alpine JS , HEEX and Elixir template code",
     "version": "0.0.4",
     "engines": {
-        "vscode": "^1.63.0"
+        "vscode": "^1.50.0"
     },
     "keywords": [
         "heex html",

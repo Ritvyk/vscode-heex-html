@@ -4,6 +4,8 @@ HEEX HTML extension for phoenix framework 🚀, it supports syntax for **Alpine 
 
 ## Features
 
+Theme used for examples - ```Monokai Dimmed```.
+
 >### HEEX Support ⭐
 supports new HEEX engine syntax highlighting out of the box.
 ![Alpine Support](/src/heex_component.gif)
